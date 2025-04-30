@@ -1,0 +1,153 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #dfe9f3, #ffffff);
+    padding: 40px 20px;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0e6655;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  input, select, button {
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1 1 calc(50% - 15px);
+  }
+  
+  input:focus, select:focus {
+    border-color: #0e6655;
+    outline: none;
+  }
+  
+  button[type="submit"] {
+    background-color: #0e6655;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #16a085;
+  }
+  
+  .filter {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #filterPriority {
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  #taskList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task {
+    background: #f7f9fc;
+    border-left: 5px solid #0e6655;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+  
+  .task:hover {
+    transform: scale(1.01);
+  }
+  
+  .task strong {
+    font-size: 18px;
+    color: #222;
+  }
+  
+  .task .meta {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #666;
+  }
+  
+  .task .priority-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+  
+  .priority-low {
+    background-color: #d4edda;
+    color: #2f6e4f;
+  }
+  
+  .priority-medium {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .priority-high {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .task button {
+    background: none;
+    border: none;
+    color: #0e6655;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .task button:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 600px) {
+    form input, form select, form button {
+      flex: 1 1 100%;
+    }
+  
+    .filter {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
